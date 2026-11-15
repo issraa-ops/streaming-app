@@ -1,0 +1,16 @@
+type,id,title,creator,durationSec,genre,releaseDate,extra
+SONG,s1,Blinding Lights,The Weeknd,200,POP,2019-11-29,After Hours
+SONG,s2,Save Your Tears,The Weeknd,215,POP,2020-03-20,After Hours
+SONG,s3,Bohemian Rhapsody,Queen,354,ROCK,1975-10-31,A Night at the Opera
+SONG,s4,Don't Stop Me Now,Queen,209,ROCK,1978-11-10,Jazz
+SONG,s5,So What,Miles Davis,562,JAZZ,1959-08-17,Kind of Blue
+SONG,s6,Bad Guy,Billie Eilish,194,POP,2019-03-29,When We All Fall Asleep
+SONG,s7,Lose Yourself,Eminem,326,RAP,2002-10-28,8 Mile
+SONG,s8,Clair de Lune,Debussy,300,CLASSICAL,1905-01-01,Suite bergamasque
+PODCAST,p1,Episode 42,Tech Talk,3600,TECH,2026-10-01,42
+PODCAST,p2,Episode 43,Tech Talk,3400,TECH,2026-11-05,43
+PODCAST,p3,Morning News,Daily Brief,900,NEWS,2026-11-12,310
+AUDIOBOOK,a1,Dune,Frank Herbert,75600,SCIFI,1965-08-01,48
+AUDIOBOOK,a2,The Hobbit,J.R.R. Tolkien,39600,FANTASY,1937-09-21,19
+SONG,s9,Broken Line,Unknown,abc,POP,2020-01-01,Demo
+VIDEO,v1,Some Video,Someone,100,POP,2020-01-01,x
