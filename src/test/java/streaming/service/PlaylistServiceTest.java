@@ -26,7 +26,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PlaylistServiceTest {
-
     private PlaylistService service;
     private Playlist freePlaylist;
 
@@ -121,7 +120,6 @@ class PlaylistServiceTest {
 
         List<Media> shuffled = service.shuffle(freePlaylist);
 
-        // not possible to avoid the same creator, so we just check nothing is lost
         assertEquals(3, shuffled.size());
         assertTrue(shuffled.containsAll(freePlaylist.getItems()));
     }

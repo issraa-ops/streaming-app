@@ -23,11 +23,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class App {
-
     public static void main(String[] args) {
         Path file = Path.of(args.length > 0 ? args[0] : "data/media.csv");
 
-        // 1. load the data
         MediaCsvLoader loader = new MediaCsvLoader();
         MediaLibrary library;
         try {
@@ -45,7 +43,6 @@ public class App {
         PlaybackService playbackService = new PlaybackService();
         RecommendationService recommendationService = new RecommendationService();
 
-        // 2. a free user builds a playlist
         User alice = new User("Alice", new FreePlan());
         alice.addFavoriteGenre(Genre.POP);
         alice.addFavoriteGenre(Genre.TECH);
@@ -71,7 +68,6 @@ public class App {
             System.out.println("  " + media);
         }
 
-        // 3. skips
         System.out.println();
         System.out.println("=== skips ===");
         LocalDateTime now = LocalDateTime.now();
@@ -84,7 +80,6 @@ public class App {
             }
         }
 
-        // 4. a premium user listens to an audiobook and comes back later
         User bob = new User("Bob", new PremiumPlan());
         bob.addFavoriteGenre(Genre.SCIFI);
         System.out.println();
@@ -98,7 +93,6 @@ public class App {
             System.out.println(e.getMessage());
         }
 
-        // 5. recommendations
         System.out.println();
         printRecommendations(recommendationService, alice, library.getAll());
         printRecommendations(recommendationService, bob, library.getAll());

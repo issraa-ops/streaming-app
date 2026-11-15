@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MediaFactoryTest {
-
     @Test
     void createsTheRightSubclass() throws Exception {
         Media song = MediaFactory.fromCsvLine("SONG,s1,Blinding Lights,The Weeknd,200,POP,2019-11-29,After Hours");

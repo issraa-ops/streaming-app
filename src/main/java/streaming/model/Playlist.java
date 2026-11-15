@@ -3,12 +3,7 @@ package streaming.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A playlist only stores the media.
- * The rules (limit, premium content, duplicates) are checked in PlaylistService.
- */
 public class Playlist {
-
     private final String name;
     private final User owner;
     private final List<Media> items;

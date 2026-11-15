@@ -3,7 +3,6 @@ package streaming.model;
 import java.time.LocalDate;
 
 public class Audiobook extends Media implements Resumable {
-
     private final int chapterCount;
     private int position;
 
@@ -28,7 +27,6 @@ public class Audiobook extends Media implements Resumable {
     @Override
     public double recommendationScore(User user) {
         double score = 40 + genreBonus(user);
-        // we push the books the user started but did not finish
         if (isStarted() && !isFinished()) {
             score += 40;
         }

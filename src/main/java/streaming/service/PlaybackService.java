@@ -12,8 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 public class PlaybackService {
-
-    // for each user name, the times of the skips
     private final Map<String, List<LocalDateTime>> skips = new HashMap<>();
 
     public String play(Media media) {
@@ -26,7 +24,6 @@ public class PlaybackService {
         return "Playing " + media.getTitle() + " (" + formatTime(media.getDurationSeconds()) + ")";
     }
 
-    // when the user stops, we keep the position only if the media can be resumed
     public void stop(Media media, int secondsListened) {
         if (media instanceof Resumable) {
             ((Resumable) media).savePosition(secondsListened);
@@ -36,7 +33,6 @@ public class PlaybackService {
     public void skip(User user, LocalDateTime now) throws SkipLimitReachedException {
         List<LocalDateTime> userSkips = skips.computeIfAbsent(user.getName(), k -> new ArrayList<>());
 
-        // only the skips of the last hour count
         userSkips.removeIf(time -> time.isBefore(now.minusHours(1)));
 
         int max = user.getPlan().maxSkipsPerHour();

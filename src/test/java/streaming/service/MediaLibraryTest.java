@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MediaLibraryTest {
-
     private final Song song = new Song("s1", "Bad Guy", "Billie", 194, Genre.POP, LocalDate.of(2019, 3, 29), "Album");
     private final MediaLibrary library = new MediaLibrary(List.of(song));
 

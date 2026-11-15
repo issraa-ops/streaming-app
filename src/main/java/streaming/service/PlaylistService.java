@@ -14,14 +14,12 @@ import java.util.List;
 import java.util.Random;
 
 public class PlaylistService {
-
     private final Random random;
 
     public PlaylistService() {
         this(new Random());
     }
 
-    // used by the tests to get the same shuffle every time
     public PlaylistService(Random random) {
         this.random = random;
     }
@@ -48,10 +46,6 @@ public class PlaylistService {
         }
     }
 
-    /**
-     * Shuffles the playlist but avoids two items of the same creator in a row.
-     * If it is not possible (for example only one creator), the rest is added in random order.
-     */
     public List<Media> shuffle(Playlist playlist) {
         List<Media> remaining = new ArrayList<>(playlist.getItems());
         Collections.shuffle(remaining, random);

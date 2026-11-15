@@ -7,11 +7,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class RecommendationService {
-
-    /**
-     * Returns the n best media for the user.
-     * The score is computed by each subclass (polymorphism), here we only sort.
-     */
     public List<Media> recommend(User user, List<Media> medias, int n) {
         if (n < 0) {
             throw new IllegalArgumentException("n cannot be negative");

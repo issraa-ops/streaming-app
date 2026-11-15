@@ -7,11 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * All the media loaded from the file.
- */
 public class MediaLibrary {
-
     private final List<Media> medias;
 
     public MediaLibrary(List<Media> medias) {

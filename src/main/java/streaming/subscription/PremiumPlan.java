@@ -3,7 +3,6 @@ package streaming.subscription;
 import streaming.model.Media;
 
 public class PremiumPlan implements SubscriptionPlan {
-
     @Override
     public String getName() {
         return "Premium";

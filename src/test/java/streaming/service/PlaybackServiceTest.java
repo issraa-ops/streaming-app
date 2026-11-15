@@ -19,7 +19,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PlaybackServiceTest {
-
     private PlaybackService service;
     private final LocalDateTime now = LocalDateTime.of(2026, 11, 14, 10, 0);
 

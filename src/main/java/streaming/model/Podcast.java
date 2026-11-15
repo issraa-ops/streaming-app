@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Podcast extends Media implements Resumable {
-
     private final int episodeNumber;
     private int position;
 
@@ -20,7 +19,6 @@ public class Podcast extends Media implements Resumable {
 
     @Override
     public double recommendationScore(User user) {
-        // recent episodes are more interesting : -1 point per week
         long weeks = ChronoUnit.WEEKS.between(getReleaseDate(), LocalDate.now());
         double score = 60 + genreBonus(user) - weeks;
         return Math.max(score, 0);

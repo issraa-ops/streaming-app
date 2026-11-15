@@ -10,11 +10,7 @@ import streaming.model.Song;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-/**
- * Builds the right subclass of Media from one line of the CSV file.
- */
 public class MediaFactory {
-
     private static final int NB_COLUMNS = 8;
 
     public static Media fromCsvLine(String line) throws InvalidMediaDataException {
@@ -49,7 +45,6 @@ public class MediaFactory {
         } catch (DateTimeParseException e) {
             throw new InvalidMediaDataException("bad date : " + line);
         } catch (IllegalArgumentException e) {
-            // unknown genre, or a value refused by the Media constructor
             throw new InvalidMediaDataException(e.getMessage() + " : " + line);
         }
     }

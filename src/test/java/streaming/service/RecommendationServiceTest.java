@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class RecommendationServiceTest {
-
     private final RecommendationService service = new RecommendationService();
     private final Song popSong = new Song("s1", "Pop", "A", 200, Genre.POP, LocalDate.of(2020, 1, 1), "Album");
     private final Song rockSong = new Song("s2", "Rock", "B", 200, Genre.ROCK, LocalDate.of(2020, 1, 1), "Album");
